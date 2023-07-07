@@ -10,12 +10,13 @@ function callCats(input){
         }
     }
 
-    for (const animal of input) {
-        let [name, age] = animal.split(' ');
+    input.forEach((line) => {
+        
+        let [name, age] = line.split(' ');
         
         let cat = new Cat(name, age);
         cat.makeSound();
-    }
+    });
 }
 
 callCats(['Mellow 2', 'Tom 5'])
